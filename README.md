@@ -1,13 +1,13 @@
 # TO-DOS
 
     * Maquetacion ( Bootstrap / Material UI)
-        - Navbar
-        - Contenedor general
+        - Navbar Juan Manuel
+        - Contenedor general Julian
         - Contenedor instruccion
 
-    * Leer documentacion para endpoints React. (axios)
+    * Leer documentacion para endpoints React. (axios) Julian
 
-    * Leer documentacion https://www.themealdb.com/api.php
+    * Leer documentacion https://www.themealdb.com/api.php Juan Manuel
 
     * Funcionalidad de categorías
 
