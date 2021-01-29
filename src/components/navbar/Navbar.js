@@ -1,8 +1,21 @@
 import './Navbar.css';
-import React from 'react';
-// import { Link } from 'react-router-dom';
+import React, {useEffect, useState} from 'react';
+// import { getGiHubUserWithAxios } from '../../helpers';
+import axios from 'axios';
 
 function Navbar(){
+    const [categories, setCategories] = useState();
+    useEffect(() => {
+        axios.get("https://www.themealdb.com/api/json/v1/1/categories.php").then((value) => {
+            Object.keys(value.data).forEach((cat)=>{
+                value.data[cat].forEach((nombre)=>{
+                    if (nombre.idCategory==='1'){
+                        setCategories(nombre.strCategory);
+                    }
+                })
+            });
+        });
+    }, [])
     return(
         <nav className="header" id="header">
             {/* <Link to="">
@@ -20,7 +33,7 @@ function Navbar(){
             </div> */}
             <div className="menu" id="menu" alt="menu">
                 <ul>
-                    <li><a href="/">Breakfast</a></li>
+                    <li><a href={`/${categories}`}>{categories}</a></li>
                     <li><a href="/">Desert</a></li>
                     <li><a href="/">Miscellaneus</a></li>
                     <li><a href="/">Pasta</a></li>
