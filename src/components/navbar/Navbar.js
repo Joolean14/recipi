@@ -2,12 +2,13 @@ import "./Navbar.css";
 import React, { useLayoutEffect, useState } from "react";
 // import { getCategorias, getInstrucciones } from "./../../helpers";
 import axios from "axios";
+import { getCategorias } from "../../helpers";
 
 // import { Link } from 'react-router-dom';
 
-function Navbar(props) {
+function Navbar(props) { // arrow function
   const [state, setstate] = useState();
-//   console.log(state);
+  // console.log(state);
 
   useLayoutEffect(() => {
     axios
@@ -31,37 +32,24 @@ function Navbar(props) {
 
   return (
     <nav className="header" id="header">
-      {/* <Link to="">
-                <img className="logoHeader" id="logoHeader" alt="logo" src="/trainbook.jpg"></img>
-            </Link> */}
-      {/* <div className="language" id="language" alt="language">
-                <ul>
-                    <li><a href="/home">EN</a></li>
-                    <li><a href="/e2shome">ES</a></li>
-                </ul>
-            </div>
-            <div className="header_search" id="header_search">
-                <input className="headerSearchInput" type="text" id="headerSearchInput" placeholder="Search"/>
-                <SearchIcon className="searchIcon"/>
-            </div> */}
       <div className="menu" id="menu" alt="menu">
-              <ul>
+              
+              {/* <ul>
                  
-                  {/* {state.forEach((elem) => {
-                      <li>{elem}</li>
-                   })} */}
+                  {state.forEach((elem) => {
+                    <li>{elem}</li>
+                   })}
 
-          {/* <li><a href="/">Desert</a></li>
-                    <li><a href="/">Miscellaneus</a></li>
-                    <li><a href="/">Pasta</a></li>
-                    <li><a href="/">Side</a></li>
-                    <li><a href="/">Starter</a></li>
-                <li><a href="/">Vegetarian</a></li> */}
-        </ul>
-        <p>{state}</p>
+        </ul> */}
+        <p>{state[0]}</p>
       </div>
     </nav>
   );
 }
 
 export default Navbar;
+
+// Cambiar a funcion de flecha
+//   .map
+// Como mostrar las getCategorias 
+// useRef useLayoutEffect useState
