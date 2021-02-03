@@ -6,7 +6,8 @@ import { getCategorias } from "../../helpers";
 
 // import { Link } from 'react-router-dom';
 
-function Navbar(props) { // arrow function
+const Navbar = (props) => {
+  // arrow function
   const [state, setstate] = useState();
   // console.log(state);
 
@@ -19,10 +20,11 @@ function Navbar(props) { // arrow function
         let instrucciones = [];
 
         for (let i = 0; i < response.data.meals.length; i++) {
-            instrucciones.push(response.data.meals[i].strCategory);
-          }
-          console.log(instrucciones);
+          instrucciones.push(response.data.meals[i].strCategory);
+        }
         setstate(instrucciones);
+        console.log(state);
+        console.log(instrucciones);
       })
       .catch(function (error) {
         // handle error
@@ -33,23 +35,22 @@ function Navbar(props) { // arrow function
   return (
     <nav className="header" id="header">
       <div className="menu" id="menu" alt="menu">
-              
-              {/* <ul>
-                 
-                  {state.forEach((elem) => {
-                    <li>{elem}</li>
-                   })}
-
-        </ul> */}
-        <p>{state[0]}</p>
+        <ul>
+          {state === undefined ? (
+            <li></li>
+          ) : (
+            state.map((elem) => {
+              return (<li key={elem}>{ elem }  </li>);
+          })
+          )})
+        </ul>
+        {/* <p>{state[0]}</p> */}
       </div>
     </nav>
   );
-}
+};
 
 export default Navbar;
 
-// Cambiar a funcion de flecha
-//   .map
-// Como mostrar las getCategorias 
+// Como mostrar las getCategorias
 // useRef useLayoutEffect useState

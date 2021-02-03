@@ -1,13 +1,5 @@
 const axios = require("axios");
 
-export const getGiHubUserWithAxios = () => {
-  axios
-    .get("https://www.themealdb.com/api/json/v1/1/categories.php")
-    .then((value) => {
-      console.log(value);
-    });
-};
-
 // Traigo Ingredientes
 export const getIngredientes = () => {
   axios
@@ -88,7 +80,7 @@ export const getInstrucciones = () => {
 }
 
 // Traigo thumbnail
-export const traigoThumbnail = () => {
+export const getThumbnail = () => {
   axios
     .get("https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata")
     .then(function (response) {
@@ -102,7 +94,7 @@ export const traigoThumbnail = () => {
         }
       }
 
-      // console.log(thumbnail);
+      return thumbnail;
     })
     .catch(function (error) {
       // handle error
@@ -124,7 +116,7 @@ export const getPlato = () => {
           plato = value;
         }
       }
-
+      return plato;
       //  console.log(plato);
     })
     .catch(function (error) {
