@@ -77,15 +77,11 @@ const Contenedorinstruccion = () => {
                           {elem.strIngredient5}: {elem.strMeasure5}
                       </li>
                       <li>
-                          {elem.strIngredient15}: {elem.strMeasure15}
+                          {elem.strIngredient6}: {elem.strMeasure6}
                       </li>
-                        {ingredientescompletos===undefined?(<p>Working</p>):(
-                            ingredientescompletos.map((ingrediente)=>{
-                                return (<p>{ingrediente}</p>
-                                )
-                            })
-                        )
-                        }
+                      <li>
+                          {elem.strIngredient7}: {elem.strMeasure7}
+                      </li>
                     </div>
                     // <div key={elem.strMeal} className="card shadow-sm">
                     //   <img src= {elem.strMealThumb} className="imagen" alt={elem.strMeal}/>
