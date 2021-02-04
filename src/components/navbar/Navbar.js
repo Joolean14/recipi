@@ -40,11 +40,10 @@ const Navbar = (props) => {
             <li></li>
           ) : (
             state.map((elem) => {
-              return (<li key={elem}>{ elem }  </li>);
+              return (<li key={elem}><a href="">{ elem }</a>  </li>);
           })
           )})
         </ul>
-        {/* <p>{state[0]}</p> */}
       </div>
     </nav>
   );

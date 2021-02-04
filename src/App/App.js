@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, useParams} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from '../components/navbar/Navbar';
 import './../helpers';
@@ -20,13 +20,10 @@ function App() {
           <Messages/>
           <Footer/> */}
         </Route>
-        {/* <Route path='/booking'>
-          <Header/>
-          <Results/>
-          <Results/>
-          <Footer/>
+        <Route path="home/:id">
+          <Navbar />
         </Route>
-        <Route path='/eshome'>
+        {/*<Route path='/eshome'>
           <Cabezote/>
           <Fondo/>
           <Footer/>
