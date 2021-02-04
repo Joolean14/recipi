@@ -60,6 +60,25 @@ const Contenedorinstruccion = () => {
                   return (
                     <div key={elem.strMeal} className="titulo">
                       <h1>{elem.strMeal}</h1>
+                      <p>{elem.strInstructions}</p>
+                      <li>
+                          {elem.strIngredient1}: {elem.strMeasure1}
+                      </li>
+                      <li>
+                          {elem.strIngredient2}: {elem.strMeasure2}
+                      </li>
+                      <li>
+                          {elem.strIngredient3}: {elem.strMeasure3}
+                      </li>
+                      <li>
+                          {elem.strIngredient4}: {elem.strMeasure4}
+                      </li>
+                      <li>
+                          {elem.strIngredient5}: {elem.strMeasure5}
+                      </li>
+                      <li>
+                          {elem.strIngredient15}: {elem.strMeasure15}
+                      </li>
                         {ingredientescompletos===undefined?(<p>Working</p>):(
                             ingredientescompletos.map((ingrediente)=>{
                                 return (<p>{ingrediente}</p>
