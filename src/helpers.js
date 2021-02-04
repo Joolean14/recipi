@@ -19,7 +19,7 @@ export const getIngredientes = () => {
       }
 
       for (let j = 0; j < ingredientes.length; j++) {
-        if (ingredientes[j] !== null || ingredientes.length === 0) {
+        if (ingredientes[j] !== null || ingredientes[j] !== "") {
           ingredientesFiltrados.push(ingredientes[j]);
         }
       }

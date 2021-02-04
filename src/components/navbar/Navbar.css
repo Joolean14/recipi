@@ -75,7 +75,7 @@
     border-right: none;
 }
 
-.language li a{
+.language li button{
     display: block;
     /* padding: 27px 10px 20px 10px; */
     display: block;
@@ -112,7 +112,7 @@
     border-right: none;
 }
 
-.menu li a{
+.menu li button{
     display: block;
     /* padding: 27px 10px 20px 10px; */
     display: block;
@@ -120,4 +120,8 @@
     text-align: center;
     text-decoration: none;
     font-size: 3.5mm;
+}
+.boton {
+    background-color: rgb(246, 246, 248);
+    border: none;
 }

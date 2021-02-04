@@ -2,14 +2,14 @@ import React, { useLayoutEffect, useState } from "react";
 import {useHistory, useParams} from "react-router-dom";
 import axios from "axios";
 import "./Contenedorgeneral.css"
-
+import Navbar from "../navbar/Navbar";
 const Contenedorgeneral = () => {
   // const [thumbnail, setThumbnail] = useState();
   const [plato, setPlato] = useState();
-
+  let { id } = useParams();
   useLayoutEffect(() => {
     axios
-      .get("https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood")
+      .get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${id}`)
       .then(function (response) {
         // handle success
         let dataReceta = response.data.meals;
@@ -19,14 +19,14 @@ const Contenedorgeneral = () => {
         // handle error
         console.log(error);
       });
-  }, []);
+  }, [id]);
   const history =useHistory();
   
   // const  HomeButton = (id) => {
   //   const history = useHistory();
   
-  const handleClick = (id) => {
-    history.push(`/home/${id}`);
+  const handleClick = (plat) => {
+    history.push(`/home/${id}/${plat}`);
   }
   
   //   return (
@@ -41,6 +41,8 @@ const Contenedorgeneral = () => {
   //   return address;
   // }
   return (
+    <>
+    <Navbar />
     <main className="topnavbar">
       <div className="album py-5 bg-light">
         <div className="container">
@@ -76,6 +78,7 @@ const Contenedorgeneral = () => {
         </div>
       </div>
     </main>
+    </>
   );
 };
 
