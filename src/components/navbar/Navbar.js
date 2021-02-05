@@ -30,27 +30,32 @@ const Navbar = (props) => {
 
   return (
     <nav className="header" id="header">
-      <div className="menu" id="menu" alt="menu">
-        <ul>
-          {state === undefined ? (
-            <li></li>
-          ) : (
-            state.map((elem) => {
-              return (
-                <li key={elem}>
-                  <button
-                    className="boton"
-                    onClick={() => {
-                      handleClick(elem);
-                    }}
+      <div className="menu container" id="menu" alt="menu">
+        <div >
+          <ul className="row row-cols-1 row-cols-sm-2 row-cols-md-6 g-6">
+            {state === undefined ? (
+              <li></li>
+            ) : (
+              state.map((elem) => {
+                return (
+                  <li
+                    key={elem}
+                    
                   >
-                    {elem}
-                  </button>{" "}
-                </li>
-              );
-            })
-          )}
-        </ul>
+                    <button
+                      className="boton"
+                      onClick={() => {
+                        handleClick(elem);
+                      }}
+                    >
+                      {elem}
+                    </button>{" "}
+                  </li>
+                );
+              })
+            )}
+          </ul>
+        </div>
       </div>
     </nav>
   );

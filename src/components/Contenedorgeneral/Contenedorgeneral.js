@@ -4,7 +4,6 @@ import axios from "axios";
 import "./Contenedorgeneral.css";
 import Navbar from "../navbar/Navbar";
 const Contenedorgeneral = () => {
-  // const [thumbnail, setThumbnail] = useState();
   const [plato, setPlato] = useState();
   let { id } = useParams();
   useLayoutEffect(() => {
@@ -22,24 +21,11 @@ const Contenedorgeneral = () => {
   }, [id]);
   const history = useHistory();
 
-  // const  HomeButton = (id) => {
-  //   const history = useHistory();
 
   const handleClick = (plat) => {
     history.push(`/home/${id}/${plat}`);
   };
 
-  //   return (
-  //     <button type="button" onClick={handleClick}>
-  //       View
-  //     </button>
-  //   );
-  // }
-  // const goaddress = (id)=>{
-  //   let address ="./home/";
-  //   address+=id;
-  //   return address;
-  // }
   return (
     <>
       <Navbar />
@@ -78,8 +64,6 @@ const Contenedorgeneral = () => {
                   );
                 })
               )}
-              {/* <div className="col">
-            </div> */}
             </div>
           </div>
         </div>
