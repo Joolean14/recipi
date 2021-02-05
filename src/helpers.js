@@ -9,22 +9,24 @@ export const getIngredientes = () => {
       let dataReceta = response.data.meals[0];
       let ingredientes = [];
       let i = 1;
-      let ingredientesFiltrados = [];
+      // let ingredientesFiltrados = [];
 
       for (const [key, value] of Object.entries(dataReceta)) {
         if (key === "strIngredient" + i) {
-          ingredientes.push(value);
-          i++;
+          if (value !== null || value !== "") {
+            ingredientes.push(value);
+            i++;
+          }
         }
       }
 
-      for (let j = 0; j < ingredientes.length; j++) {
-        if (ingredientes[j] !== null || ingredientes[j] !== "") {
-          ingredientesFiltrados.push(ingredientes[j]);
-        }
-      }
+      // for (let j = 0; j < ingredientes.length; j++) {
+      //   if (ingredientes[j] !== null || ingredientes[j] !== "") {
+      //     ingredientesFiltrados.push(ingredientes[j]);
+      //   }
+      // }
 
-      console.log(ingredientesFiltrados);
+      console.log(ingredientes);
     })
     .catch(function (error) {
       // handle error
