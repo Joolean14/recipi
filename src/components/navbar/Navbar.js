@@ -4,7 +4,6 @@ import axios from "axios";
 import { useHistory } from "react-router-dom";
 
 const Navbar = (props) => {
-  // arrow function
   const [state, setstate] = useState();
   const history = useHistory();
   const handleClick = (id) => {
@@ -16,7 +15,6 @@ const Navbar = (props) => {
       .then(function (response) {
         // handle success
         let instrucciones = [];
-
         for (let i = 0; i < response.data.meals.length; i++) {
           instrucciones.push(response.data.meals[i].strCategory);
         }
@@ -40,7 +38,6 @@ const Navbar = (props) => {
                 return (
                   <li
                     key={elem}
-                    
                   >
                     <button
                       className="boton"

@@ -19,8 +19,8 @@ const Contenedorgeneral = () => {
         console.log(error);
       });
   }, [id]);
-  const history = useHistory();
 
+  const history = useHistory();
 
   const handleClick = (plat) => {
     history.push(`/home/${id}/${plat}`);

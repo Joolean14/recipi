@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+    background-color: rgb(238, 238, 238);
+}
+.platillo {
+    text-align: center;
+}
+.col {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.imagen_continst {
+    width: 500px;
+    height: 100%;
+    padding: 10px 100px 10px 00px;
+    border-radius: 100%;
+}
+
+.listIngr {
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+  
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+}
+.prep {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    text-align: center;
+}
+.prepa {
+    text-align: justify;
+    padding-top: 15px;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 300px;
+    height: 25px;
+    margin: auto;
+    
+    /* padding-bottom: 20px; */
+}
+.botonCont {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    background-color: #1687a7;
+    color: black;
+    padding-left: 100px;
+    padding-right: 100px;
+    text-align: center;
+    border-radius: 2em;
+    /* width: 150px;
+    height: 25px; */
+}
+.botonCont:active {
+    background-color: #3aa3c0;
+    text-decoration: none;
+}

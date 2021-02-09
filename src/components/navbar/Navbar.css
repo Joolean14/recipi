@@ -3,7 +3,6 @@ d3e0ea
 1687a7
 276678 */
 
-
 * {
     box-sizing: border-box;
     
@@ -12,10 +11,8 @@ d3e0ea
     height: 100px;
     width: 100%;
     background-color: #276678;
-    /* position: fixed; */
     top:0;
     display: flex;
-    
 }
 
 #menu {
